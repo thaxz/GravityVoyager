@@ -1,0 +1,75 @@
+import Foundation
+import SwiftUI
+
+struct DialogueView: View {
+    
+    let planet: PlanetType
+    
+    /// The router manager for handling navigation within the app.
+    @EnvironmentObject private var routeManager: NavigationRouter
+    
+    @State var text: String = ""
+    @State var dialoguePosition: Int = 0
+    @State var isAnimating: Bool = false
+    
+    var body: some View {
+        ZStack(alignment: .bottom){
+            Color.theme.background
+                .ignoresSafeArea()
+            VStack(spacing: 24){
+                DialogueContainer(text: text)
+                HStack {
+                    DialogueButton(title: "skip") {
+                        if !isAnimating {
+                            routeManager.push(to: .tutorialView(planet: planet))
+                            dialoguePosition = 0
+                        }
+                    }
+                    Spacer()
+                    DialogueButton(title: "next") {
+                        if !isAnimating {
+                            typeWriter()
+                            dialoguePosition += 1
+                            if dialoguePosition == 5 {
+                                routeManager.push(to: .tutorialView(planet: planet))
+                                dialoguePosition = 0
+                            }
+                        }
+                    }
+                }
+            }
+            .padding(20)
+        }
+        .onAppear{
+            typeWriter()
+        }
+        .navigationBarBackButtonHidden(true)
+    }
+}
+
+// MARK: Functions
+
+extension DialogueView {
+    
+    func typeWriter(at position: Int = 0) {
+        isAnimating = true
+        if position == 0 {
+            text = ""
+        }
+        if position < planet.data.dialogue[dialoguePosition].count {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.015) {
+                text.append(planet.data.dialogue[dialoguePosition][position])
+                typeWriter(at: position + 1)
+            }
+        } // waiting the text to finish
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            isAnimating = false
+        }
+    }
+}
+
+struct DialogueView_Previews: PreviewProvider {
+    static var previews: some View {
+        DialogueView(planet: dev.mockPlanet)
+    }
+}
