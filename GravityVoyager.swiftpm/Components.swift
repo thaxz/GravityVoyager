@@ -95,6 +95,7 @@ struct DialogueContainer: View {
 // MARK: Report
 
 struct ReportHeader: View {
+    let element: AtmosphericElement
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 8)
@@ -105,11 +106,12 @@ struct ReportHeader: View {
                         .stroke(.white, lineWidth: 3)
                 )
             HStack(spacing: 24){
-                Circle()
+                Image(element.imageName)
                     .frame(width: 70, height: 70)
                     .foregroundColor(.white)
-                Text("Mars")
-                    .font(.system(size: 40, weight: .black))
+                Text(element.name)
+                    .font(.system(size: 36, weight: .black))
+                    .minimumScaleFactor(0.8)
                     .foregroundColor(.white)
                 Spacer()
             }
@@ -120,8 +122,24 @@ struct ReportHeader: View {
     }
 }
 
-// todo: pode ter um type aqui pra tirar e colocar o about
 struct ReportBody: View {
+    let element: AtmosphericElement
+    let type: TypeOfInformation
+    let description: String
+    init(element: AtmosphericElement, type: TypeOfInformation) {
+        self.element = element
+        self.type = type
+        switch type {
+        case .about:
+            self.description = element.description
+        case .origin:
+            self.description = element.origin
+        case .chemicalProperties:
+            self.description = element.chemicalProperties
+        case .usesAndApplications:
+            self.description = element.usesAndApplications
+        }
+    }
     var body: some View {
         ZStack(){
             RoundedRectangle(cornerRadius: 8)
@@ -132,20 +150,20 @@ struct ReportBody: View {
                         .stroke(.white, lineWidth: 3)
                 )
             VStack(alignment: .leading, spacing: 24){
-                Text("About")
+                Text(type.rawValue)
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
-                Text("Earth is the fifth largest planet in our solar system. It's the only planet known to harbor life and has an atmosphere composed mainly of nitrogen and oxygen.")
+                Text(description)
                     .font(.system(size: 17, weight: .regular))
                     .foregroundColor(.white)
                     .minimumScaleFactor(0.8)
                 Spacer()
             }
             .padding(.top, 24)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 16)
             .multilineTextAlignment(.leading)
         }
-        .frame(maxHeight: 250)
+        .frame(maxHeight: 300)
     }
 }
 
@@ -181,8 +199,10 @@ struct TimeContainer: View {
 
 struct Components_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        ZStack{
-            TimeContainer(time: 00)
+        VStack{
+            ReportHeader(element: dev.mockElement)
+            ReportBody(element: dev.mockElement, type: .about)
         }
+        .padding(20)
     }
 }

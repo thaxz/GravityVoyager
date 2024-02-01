@@ -10,13 +10,17 @@ struct ReportView: View {
             Color.theme.background
                 .ignoresSafeArea()
             TabView {
-                ForEach(1..<4){ _ in
-                    VStack(spacing: 24){
-                        ReportHeader()
-                        ReportBody()
-                        ReportBody()
+                ForEach(planet.data.atmosphericElements){ element in
+                    ScrollView{
+                        VStack(spacing: 24){
+                            ReportHeader(element: element)
+                            ReportBody(element: element, type: .about)
+                            ReportBody(element: element, type: .origin)
+                            ReportBody(element: element, type: .chemicalProperties)
+                            ReportBody(element: element, type: .usesAndApplications)
+                        }
+                        .padding(20)
                     }
-                    .padding(20)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .always))

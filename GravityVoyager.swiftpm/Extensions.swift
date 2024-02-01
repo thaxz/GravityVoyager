@@ -36,4 +36,12 @@ class DeveloperPreview {
     private init() {}
     
     let mockPlanet = PlanetType.mars
+    let mockElement = AtmosphericElement(
+        name: "Helium-4",
+        imageName: "He-4",
+        description: "Helium-4 is the most abundant component in the lunar atmosphere, constituting approximately 25% to 45%.",
+        origin: "It is primarily produced by the radioactive decay of uranium and thorium in lunar rocks.",
+        chemicalProperties: "Helium-4 is an inert, non-reactive gas.",
+        usesAndApplications: "It is used in cryogenics, superconductivity technology, and as a coolant in nuclear reactors."
+    )
 }

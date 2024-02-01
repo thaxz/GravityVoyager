@@ -9,12 +9,11 @@ struct Planet {
     
 }
 
-struct AtmosphericElement {
-    
+struct AtmosphericElement: Identifiable {
+    var id = UUID()
     let name: String
-    let composition: String
+    let imageName: String
     let description: String
-    let percentage: String
     let origin: String
     let chemicalProperties: String
     let usesAndApplications: String
@@ -33,5 +32,11 @@ enum PlanetType {
             return Planet(name: "Mars", dialogue: Dialogue().mars, missionTime: 60, atmosphericElements: PlanetsData().marsElements)
         }
     }
-    
+}
+
+enum TypeOfInformation: String {
+    case about = "About"
+    case origin = "Origin"
+    case chemicalProperties = "Chemical Properties"
+    case usesAndApplications = "Uses And Applications"
 }
