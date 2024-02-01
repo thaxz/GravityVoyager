@@ -16,6 +16,7 @@ let package = Package(
         .iOSApplication(
             name: "Gravity Voyager",
             targets: ["AppModule"],
+            teamIdentifier: "5S88AY6J4R",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .placeholder(icon: .plane),

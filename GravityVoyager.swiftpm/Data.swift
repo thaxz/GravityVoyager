@@ -24,13 +24,91 @@ struct Dialogue {
 struct PlanetsData {
     
     let moonElements: [AtmosphericElement] = [
-        AtmosphericElement(name: "algo da lua", composition: "algo da lua")
+        AtmosphericElement(
+            name: "Helium-4",
+            composition: "He-4",
+            description: "Helium-4 is the most abundant component in the lunar atmosphere, constituting approximately 25% to 45%.",
+            percentage: "Approximately 25% to 45%",
+            origin: "It is primarily produced by the radioactive decay of uranium and thorium in lunar rocks.",
+            chemicalProperties: "Helium-4 is an inert, non-reactive gas.",
+            usesAndApplications: "It is used in cryogenics, superconductivity technology, and as a coolant in nuclear reactors."
+        ),
+        AtmosphericElement(
+            name: "Neon",
+            composition: "Ne",
+            description: "Neon is the second most abundant gas in the lunar atmosphere, comprising about 20% to 30%.",
+            percentage: "Approximately 20% to 30%",
+            origin: "It is released by volcanic eruptions and nuclear reactions on the lunar surface.",
+            chemicalProperties: "Neon is an inert, non-reactive gas.",
+            usesAndApplications: "It is used in lighting, indicator lights, lasers, and advertising signs."
+        ),
+        AtmosphericElement(
+            name: "Hydrogen",
+            composition: "H2",
+            description: "Hydrogen in the lunar atmosphere is predominantly the result of solar wind, accounting for about 1%.",
+            percentage: "Approximately 1%",
+            origin: "It is deposited by the solar wind, which delivers hydrogen protons to the lunar surface.",
+            chemicalProperties: "Hydrogen is a flammable, highly reactive gas.",
+            usesAndApplications: "It is used in ammonia production, rocket fuel, and hydrogen fuel cells."
+        ),
+        AtmosphericElement(
+            name: "Argon",
+            composition: "Ar",
+            description: "Argon is found in very small quantities in the lunar atmosphere, constituting traces.",
+            percentage: "Traces",
+            origin: "It is primarily released by radioactive decay.",
+            chemicalProperties: "Argon is an inert, non-reactive gas.",
+            usesAndApplications: "It is used in welding, lighting, and as a protective atmosphere in metallurgy."
+        ),
+        AtmosphericElement(
+            name: "Methane",
+            composition: "CH4",
+            description: "Methane is found in very small quantities in the lunar atmosphere.",
+            percentage: "Traces",
+            origin: "Its origins are not fully understood.",
+            chemicalProperties: "Methane is a flammable, highly reactive gas.",
+            usesAndApplications: "It is used as a fuel in rocket engines, for energy production, and in chemical processes."
+        )
     ]
     
     let marsElements: [AtmosphericElement] = [
-        AtmosphericElement(name: "algo de marte", composition: "algo de marte")
+        AtmosphericElement(
+            name: "Carbon Dioxide",
+            composition: "CO2",
+            description: "Carbon dioxide makes up approximately 95% to 96% of the Martian atmosphere.",
+            percentage: "Approximately 95% to 96%",
+            origin: "It is released from volcanic eruptions, impacts, and the weathering of rocks.",
+            chemicalProperties: "Carbon dioxide is a greenhouse gas and is essential for sustaining the Martian atmosphere.",
+            usesAndApplications: "It is used in fire extinguishers, carbonated beverages, and as a propellant in aerosol sprays."
+        ),
+        AtmosphericElement(
+            name: "Nitrogen",
+            composition: "N2",
+            description: "Nitrogen constitutes about 2.7% of the Martian atmosphere.",
+            percentage: "Approximately 2.7%",
+            origin: "It is believed to be released from volcanic eruptions and cometary impacts.",
+            chemicalProperties: "Nitrogen is a relatively inert gas under normal conditions.",
+            usesAndApplications: "It is used in the production of ammonia, fertilizers, and explosives."
+        ),
+        AtmosphericElement(
+            name: "Argon",
+            composition: "Ar",
+            description: "Argon accounts for about 1.6% of the Martian atmosphere.",
+            percentage: "Approximately 1.6%",
+            origin: "It is produced by the radioactive decay of potassium-40 in Martian rocks.",
+            chemicalProperties: "Argon is an inert, non-reactive gas.",
+            usesAndApplications: "It is used in welding, lighting, and as a protective atmosphere in metallurgy."
+        ),
+        AtmosphericElement(
+            name: "Carbon Monoxide",
+            composition: "CO",
+            description: "Carbon monoxide is present in small amounts in the Martian atmosphere.",
+            percentage: "Trace amounts",
+            origin: "It is produced by the incomplete combustion of carbon-containing compounds.",
+            chemicalProperties: "Carbon monoxide is a colorless, odorless, and highly toxic gas.",
+            usesAndApplications: "It is used in the production of chemicals, fuel gases, and as a reducing agent in metallurgy."
+        )
     ]
-    
     
     
 }

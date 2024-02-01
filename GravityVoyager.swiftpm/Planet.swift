@@ -13,7 +13,11 @@ struct AtmosphericElement {
     
     let name: String
     let composition: String
-    
+    let description: String
+    let percentage: String
+    let origin: String
+    let chemicalProperties: String
+    let usesAndApplications: String
 }
 
 enum PlanetType {
