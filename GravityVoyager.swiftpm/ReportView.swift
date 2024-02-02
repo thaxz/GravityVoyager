@@ -31,6 +31,6 @@ struct ReportView: View {
 
 struct ReportView_Previews: PreviewProvider {
     static var previews: some View {
-        ReportView(planet: dev.mockPlanet)
+        ReportView(planet: dev.mockMoon)
     }
 }

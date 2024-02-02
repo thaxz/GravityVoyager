@@ -36,6 +36,7 @@ class DeveloperPreview {
     private init() {}
     
     let mockPlanet = PlanetType.mars
+    let mockMoon = PlanetType.moon
     let mockElement = AtmosphericElement(
         name: "Helium-4",
         imageName: "He-4",
