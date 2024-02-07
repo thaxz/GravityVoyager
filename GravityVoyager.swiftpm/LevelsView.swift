@@ -7,17 +7,20 @@ struct LevelsView: View {
     @EnvironmentObject private var viewModel: GameViewModel
     var body: some View {
         ZStack {
-            Color.theme.background
+            Image("backgroundGradient")
+                .resizable()
                 .ignoresSafeArea()
-            VStack(spacing: 32){
-                PrimaryButton(title: "Moon") {
-                    viewModel.selectedPlanet = .moon
-                    routeManager.push(to: .dialogueView(planet: .moon))
-                }
-                PrimaryButton(title: "Mars") {
-                    viewModel.selectedPlanet = .mars
-                    routeManager.push(to: .dialogueView(planet: .mars))
-                }
+            VStack(spacing: 50){
+                Image("moonButton")
+                    .onTapGesture {
+                        viewModel.selectedPlanet = .moon
+                        routeManager.push(to: .dialogueView(planet: .moon))
+                    }
+                Image("marsButton")
+                    .onTapGesture {
+                        viewModel.selectedPlanet = .mars
+                        routeManager.push(to: .dialogueView(planet: .mars))
+                    }
             }
             .padding(32)
         }

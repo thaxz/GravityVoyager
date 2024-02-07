@@ -72,13 +72,13 @@ class CollectableElement: SCNNode {
         self.type = type
         switch type {
         case .moon:
-            self.imageName = "lua"
+            self.imageName = "collectMoon"
         case .mars:
-            self.imageName = "marte"
+            self.imageName = "collectMars"
         }
         super.init()
         /// Creating geometry
-        let box = SCNBox(width: 0.2, height: 0.2, length: 0.0, chamferRadius: 0)
+        let box = SCNBox(width: 0.25, height: 0.25, length: 0.0, chamferRadius: 0)
         self.geometry = box
         /// Creating physics shape
         let shape = SCNPhysicsShape(geometry: box, options: nil)
@@ -89,7 +89,7 @@ class CollectableElement: SCNNode {
         self.physicsBody?.contactTestBitMask = CollisionCategory.collectRay | CollisionCategory.neutralizeRay
         self.physicsBody?.collisionBitMask = CollisionCategory.collectRay | CollisionCategory.neutralizeRay
         let material = SCNMaterial()
-        let randomNumber: Int = Int.random(in: 1...2)
+        let randomNumber: Int = Int.random(in: 1...3)
         material.diffuse.contents = UIImage(named: "\(imageName)\(randomNumber)")
         self.geometry?.materials  = [material]
         
@@ -108,13 +108,13 @@ class NeutralizableElement: SCNNode {
         self.type = type
         switch type {
         case .moon:
-            self.imageName = "neutroLua"
+            self.imageName = "neutralizeMoon"
         case .mars:
-            self.imageName = "neutroMarte"
+            self.imageName = "neutralizeMars"
         }
         super.init()
         /// Creating geometry
-        let box = SCNBox(width: 0.2, height: 0.2, length: 0.0, chamferRadius: 0)
+        let box = SCNBox(width: 0.25, height: 0.25, length: 0.0, chamferRadius: 0)
         self.geometry = box
         /// Creating physics shape
         let shape = SCNPhysicsShape(geometry: box, options: nil)

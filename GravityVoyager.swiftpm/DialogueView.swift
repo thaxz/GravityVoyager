@@ -14,19 +14,20 @@ struct DialogueView: View {
     
     var body: some View {
         ZStack(alignment: .bottom){
-            Color.theme.background
+            Image("backgroundGradient")
+                .resizable()
                 .ignoresSafeArea()
             VStack(spacing: 24){
                 DialogueContainer(text: text)
                 HStack {
-                    DialogueButton(title: "skip") {
+                    DialogueButton(title: "skip", type: .secondary) {
                         if !isAnimating {
                             routeManager.push(to: .tutorialView(planet: planet))
                             dialoguePosition = 0
                         }
                     }
                     Spacer()
-                    DialogueButton(title: "next") {
+                    DialogueButton(title: "next", type: .primary) {
                         if !isAnimating {
                             typeWriter()
                             dialoguePosition += 1

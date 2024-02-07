@@ -6,7 +6,8 @@ struct CreditsView: View {
     @EnvironmentObject private var routeManager: NavigationRouter
     var body: some View {
         ZStack {
-            Color.theme.background
+            Image("backgroundGradient")
+                .resizable()
                 .ignoresSafeArea()
             VStack(spacing: 20){
                 Spacer()

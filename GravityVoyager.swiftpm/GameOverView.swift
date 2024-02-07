@@ -9,7 +9,8 @@ struct GameOverView: View {
     
     var body: some View {
         ZStack {
-            Color.theme.background
+            Image("backgroundGradient")
+                .resizable()
                 .ignoresSafeArea()
             VStack(spacing: 20){
                 Text("Hurry up!")

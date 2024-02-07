@@ -32,10 +32,7 @@ struct SecondaryButton: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(Color.theme.primary, lineWidth: 3)
-                    .background(
-                        RoundedRectangle(cornerRadius: 16).foregroundColor(.theme.secondary)
-                    )
+                    .foregroundColor(.theme.secondary)
                 Text(title)
                     .font(.system(size: 22, weight: .medium))
                     .foregroundColor(.white)
@@ -46,21 +43,29 @@ struct SecondaryButton: View {
     }
 }
 
-// todo: fazer switch com o type se é secondary ou primary pra mudar a cor do bg
 struct DialogueButton: View {
     let title: String
+    let type: TypeOfButton
     let action: () -> Void
+    let color: Color
+    init(title: String, type: TypeOfButton, action: @escaping () -> Void) {
+        self.title = title
+        self.type = type
+        self.action = action
+        switch type {
+        case .primary:
+            color = Color.theme.primary
+        case .secondary:
+            color = Color.theme.secondary
+        }
+    }
     var body: some View {
         Button {
             action()
         } label: {
             ZStack{
-                Rectangle()
-                    .foregroundColor(Color.theme.secondary.opacity(0.30))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(.white, lineWidth: 2)
-                    )
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundColor(color)
                 Text(title)
                     .foregroundColor(.white)
                     .font(.system(size: 17, weight: .bold))
@@ -79,10 +84,6 @@ struct DialogueContainer: View {
             RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(Color.theme.secondary)
                 .opacity(0.80)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(.white, lineWidth: 3)
-                )
             Text(text)
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.white)
