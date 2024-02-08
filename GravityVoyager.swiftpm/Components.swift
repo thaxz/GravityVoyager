@@ -108,6 +108,7 @@ struct ReportHeader: View {
                 )
             HStack(spacing: 24){
                 Image(element.imageName)
+                    .resizable()
                     .frame(width: 70, height: 70)
                     .foregroundColor(.white)
                 Text(element.name)

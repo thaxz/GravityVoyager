@@ -203,6 +203,7 @@ extension GameViewController: SCNPhysicsContactDelegate {
     
     func handleCollision(contact: SCNPhysicsContact, type: ElementType) {
         removeAndReplaceNodes(contact: contact)
+        HapticManager.shared.impact()
         switch type {
         case .collectable:
             addCollectablePoint()

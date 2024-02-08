@@ -62,12 +62,12 @@ class GameViewModel: ObservableObject, GameLogicDelegate {
         switch self.selectedPlanet {
         case .moon:
             self.secondsNeeded = 60
-            self.collectableNeeded = 9
-            self.neutralizableNeeded = 6
+            self.collectableNeeded = 5
+            self.neutralizableNeeded = 5
         case .mars:
             self.secondsNeeded = 45
-            self.collectableNeeded = 8
-            self.neutralizableNeeded = 8
+            self.collectableNeeded = 7
+            self.neutralizableNeeded = 7
         }
         secondsRemaining = secondsNeeded
     }

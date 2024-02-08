@@ -68,17 +68,17 @@ extension GameView {
     
     var scoreSection: some View {
         HStack(){
-            Image(systemName: "heart.fill")
+            Image("collectIcon")
                 .resizable()
-                .frame(width: 20, height: 20)
+                .frame(width: 25, height: 25)
                 .foregroundColor(.white)
             Text("\(viewModel.collectableScore)/\(viewModel.collectableNeeded)")
                 .font(.system(size: 22, weight: .bold))
                 .foregroundColor(.white)
             Spacer()
-            Image(systemName: "house.fill")
+            Image("neutralizeIcon")
                 .resizable()
-                .frame(width: 20, height: 20)
+                .frame(width: 25, height: 25)
                 .foregroundColor(.white)
             Text("\(viewModel.neutralizableScore)/\(viewModel.neutralizableNeeded)")
                 .font(.system(size: 22, weight: .bold))

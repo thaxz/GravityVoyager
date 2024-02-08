@@ -27,7 +27,6 @@ extension String {
 }
 
 extension PreviewProvider {
-    
     static var dev: DeveloperPreview{
         return DeveloperPreview.shared
     }
@@ -56,3 +55,4 @@ enum TypeOfButton {
     case primary
     case secondary
 }
+
