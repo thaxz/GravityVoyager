@@ -49,10 +49,15 @@ class DeveloperPreview {
     )
 }
 
-// MARK: Models
+// MARK: Enums
 
 enum TypeOfButton {
     case primary
     case secondary
 }
 
+enum SoundType: String {
+    case neutralizeSound = "neutralizingElements"
+    case collectSound = "collectingElements"
+    case fail = "failSound"
+}

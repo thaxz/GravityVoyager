@@ -197,6 +197,7 @@ extension GameViewController: SCNPhysicsContactDelegate {
             handleCollision(contact: contact, type: .neutralizable)
         default:
             removeAndReplaceNodes(contact: contact)
+            SoundManager.shared.playSound(sound: .fail)
             gameOver()
         }
     }
@@ -206,8 +207,10 @@ extension GameViewController: SCNPhysicsContactDelegate {
         HapticManager.shared.impact()
         switch type {
         case .collectable:
+            SoundManager.shared.playSound(sound: .collectSound)
             addCollectablePoint()
         case .neutralizable:
+            SoundManager.shared.playSound(sound: .neutralizeSound)
             addNeutralizablePoint()
         }
     }

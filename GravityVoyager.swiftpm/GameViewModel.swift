@@ -59,6 +59,8 @@ class GameViewModel: ObservableObject, GameLogicDelegate {
     }
     
     func changeValues(){
+        collectableScore = 0
+        neutralizableScore = 0
         switch self.selectedPlanet {
         case .moon:
             self.secondsNeeded = 60
