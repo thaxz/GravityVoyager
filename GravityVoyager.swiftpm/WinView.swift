@@ -49,10 +49,10 @@ extension WinView {
     
     var headerText: some View {
         VStack(spacing: 32){
-            Text("Parabéns!")
+            Text("Well done!")
                 .font(.system(size: 28, weight: .bold))
                 .foregroundColor(.white)
-            Text("Você cumpriu sua missão e conseguiu enviar os dados para o Instituto etc")
+            Text("You have managed to collect all the necessary samples in this region. Your report has been sent to the institute.")
                 .font(.system(size: 20, weight: .regular))
                 .foregroundColor(.white)
         }

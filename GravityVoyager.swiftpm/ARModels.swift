@@ -31,7 +31,7 @@ class CollectRay: SCNNode {
         self.physicsBody?.collisionBitMask = CollisionCategory.collectableElement | CollisionCategory.neutralizableElement
         self.physicsBody?.contactTestBitMask = CollisionCategory.collectableElement | CollisionCategory.neutralizableElement
         let material = SCNMaterial()
-        material.diffuse.contents = UIImage(named: "dart")
+        material.diffuse.contents = UIImage(named: "collectIcon")
         self.geometry?.materials  = [material]
     }
     
@@ -55,7 +55,8 @@ class NeutralizeRay: SCNNode {
         // tem que adicionar o neutralize aq tb
         self.physicsBody?.contactTestBitMask = CollisionCategory.collectableElement | CollisionCategory.neutralizableElement // Bitmask of what is going to collide with
         let material = SCNMaterial()
-        material.diffuse.contents = UIImage(named: "dart")
+        material.diffuse.contents = Color.black
+        material.diffuse.contents = UIImage(named: "neutralizeIcon")
         self.geometry?.materials  = [material]
     }
     

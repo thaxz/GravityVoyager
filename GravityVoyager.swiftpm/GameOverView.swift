@@ -13,18 +13,14 @@ struct GameOverView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack(spacing: 20){
-                Text("Hurry up!")
-                    .font(.system(size: 36, weight: .bold))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
                 ZStack {
                     RoundedRectangle(cornerRadius: 16)
                         .foregroundColor(.theme.secondary)
                     VStack(spacing: 26){
-                        Text("Eita!")
+                        Text("Almost there!")
                             .font(.system(size: 28, weight: .bold))
                             .foregroundColor(.white)
-                        Text("Você não conseguiu pegar todos os componentes necessários a tempo e teve que retornar para sua nave!")
+                        Text("Something went wrong in your mission, return to the ship to recalibrate your equipment and try again!")
                             .font(.system(size: 20, weight: .regular))
                             .foregroundColor(.white)
                         Image("gearIllustration")
