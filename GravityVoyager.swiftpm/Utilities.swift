@@ -37,6 +37,7 @@ class DeveloperPreview {
     static let shared = DeveloperPreview()
     private init() {}
     
+    let mockVm = GameViewModel.shared
     let mockPlanet = PlanetType.mars
     let mockMoon = PlanetType.moon
     let mockElement = AtmosphericElement(

@@ -27,8 +27,10 @@ struct GameOverView: View {
                         Text("Você não conseguiu pegar todos os componentes necessários a tempo e teve que retornar para sua nave!")
                             .font(.system(size: 20, weight: .regular))
                             .foregroundColor(.white)
-                        Rectangle()
-                            .foregroundColor(.white)
+                        Image("gearIllustration")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
                     }
                     .padding(16)
                 }
@@ -44,5 +46,11 @@ struct GameOverView: View {
             .multilineTextAlignment(.center)
         }
         .navigationBarBackButtonHidden(true)
+    }
+}
+
+struct GameOverView_Previews: PreviewProvider {
+    static var previews: some View {
+        GameOverView(planet: dev.mockPlanet)
     }
 }

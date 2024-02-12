@@ -61,13 +61,13 @@ extension WinView {
     var catchedComponents: some View {
         ZStack(){
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(.secondary.opacity(0.5))
+                .foregroundColor(.white.opacity(0.1))
             VStack{
-                Image(systemName: "square.fill")
+                Image("folderIllustration")
                     .resizable()
-                    .frame(width: 50, height: 50)
-                Text("\(viewModel.collectableScore) collected")
-                    .font(.system(size: 22, weight: .medium))
+                    .frame(width: 70, height: 60)
+                Text("\(viewModel.collectableScore) \n collected")
+                    .font(.system(size: 20, weight: .medium))
                     .foregroundColor(.white)
             }
         }
@@ -77,13 +77,13 @@ extension WinView {
     var removedComponents: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(.secondary.opacity(0.5))
+                .foregroundColor(.white.opacity(0.1))
             VStack{
-                Image(systemName: "square.fill")
+                Image("beckerIllustration")
                     .resizable()
-                    .frame(width: 50, height: 50)
-                Text("\(viewModel.neutralizableScore) neutralized")
-                    .font(.system(size: 22, weight: .medium))
+                    .frame(width: 65, height: 65)
+                Text("\(viewModel.neutralizableScore) \n neutralized")
+                    .font(.system(size: 20, weight: .medium))
                     .foregroundColor(.white)
             }
         }
@@ -95,5 +95,6 @@ extension WinView {
 struct WinView_Previews: PreviewProvider {
     static var previews: some View {
         WinView(planet: dev.mockPlanet)
+            .environmentObject(dev.mockVm)
     }
 }
