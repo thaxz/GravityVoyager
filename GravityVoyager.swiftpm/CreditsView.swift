@@ -1,7 +1,6 @@
 import Foundation
 import SwiftUI
 
-// todo: design this screen
 struct CreditsView: View {
     @EnvironmentObject private var routeManager: NavigationRouter
     var body: some View {
