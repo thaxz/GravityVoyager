@@ -13,20 +13,13 @@ struct LevelsView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack(spacing: 50){
-                Image("moonButton")
-                    .onTapGesture {
-                        viewModel.selectedPlanet = .moon
-                        routeManager.push(to: .dialogueView(planet: .moon))
-                    }
-                Image("marsButton")
-                    .onTapGesture {
-                        viewModel.selectedPlanet = .mars
-                        routeManager.push(to: .dialogueView(planet: .mars))
-                    }
+                headerSection
+                moonButton
+                marsButton
+                Spacer()
             }
             .padding(32)
         }
-        .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 infoButton
@@ -55,11 +48,68 @@ extension LevelsView {
                 .background(
                     RoundedRectangle(cornerRadius: 8)
                         .fill(.white)
-                        .frame(width: 40, height: 40)
+                        .frame(width: 30, height: 30)
                 )
                 .padding(.trailing, 12)
         }
     }
+    
+    var headerSection: some View {
+        RoundedRectangle(cornerRadius: 16)
+            .frame(height: 100)
+            .foregroundColor(.theme.secondary.opacity(0.30))
+            .overlay(
+                HStack(spacing: 20){
+                    Image("folderIllustration")
+                        .resizable()
+                        .frame(width: 55, height: 45)
+                    Text("Choose a mission")
+                        .foregroundColor(.white)
+                        .font(.system(size: 26, weight: .semibold))
+                }
+            )
+    }
+    
+    var moonButton: some View {
+        Button {
+            viewModel.selectedPlanet = .moon
+            routeManager.push(to: .dialogueView(planet: .moon))
+        } label: {
+            ZStack{
+                RoundedRectangle(cornerRadius: 16)
+                    .frame(height: 100)
+                    .foregroundColor(.theme.moon)
+                HStack(spacing: 16){
+                    Image("moonButton")
+                    Text("Moon")
+                        .foregroundColor(.white)
+                        .font(.system(size: 24, weight: .semibold))
+                    Spacer()
+                }
+            }
+        }
+    }
+    
+    var marsButton: some View {
+        Button {
+            viewModel.selectedPlanet = .mars
+            routeManager.push(to: .dialogueView(planet: .mars))
+        } label: {
+            ZStack{
+                RoundedRectangle(cornerRadius: 16)
+                    .frame(height: 100)
+                    .foregroundColor(.theme.mars)
+                HStack(spacing: 16){
+                    Image("marsButton")
+                    Text("Mars")
+                        .foregroundColor(.white)
+                        .font(.system(size: 24, weight: .semibold))
+                    Spacer()
+                }
+            }
+        }
+    }
+    
 }
 
 struct LevelsView_Previews: PreviewProvider {

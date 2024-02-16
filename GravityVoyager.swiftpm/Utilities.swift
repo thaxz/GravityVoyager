@@ -17,6 +17,8 @@ struct ColorTheme {
     let secondary = Color("secondaryColor")
     let background = Color("backgroundColor")
     let text = Color("textColor")
+    let mars = Color("marsColor")
+    let moon = Color("moonColor")
 }
 
 //The extension adds a subscript and The subscript takes an offset parameter of type Int and returns the corresponding character at the specified position. It's used on the TypeWritter effect
