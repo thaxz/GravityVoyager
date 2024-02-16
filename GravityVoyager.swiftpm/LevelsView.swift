@@ -5,6 +5,8 @@ struct LevelsView: View {
     /// The router manager for handling navigation within the app.
     @EnvironmentObject private var routeManager: NavigationRouter
     @EnvironmentObject private var viewModel: GameViewModel
+    @State var showInfoSheet: Bool = false
+    
     var body: some View {
         ZStack {
             Image("backgroundGradient")
@@ -23,6 +25,39 @@ struct LevelsView: View {
                     }
             }
             .padding(32)
+        }
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                infoButton
+            }
+        }
+        .sheet(isPresented: $showInfoSheet){
+            InfoView()
+                .presentationDetents([.fraction(0.8)])
+        }
+    }
+}
+
+// MARK: Components
+
+extension LevelsView {
+    
+    var infoButton: some View {
+        Button {
+            showInfoSheet.toggle()
+        } label: {
+            Image(systemName: "info")
+                .resizable()
+                .scaledToFit()
+                .bold()
+                .foregroundColor(.black)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(.white)
+                        .frame(width: 40, height: 40)
+                )
+                .padding(.trailing, 12)
         }
     }
 }
