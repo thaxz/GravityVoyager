@@ -13,6 +13,9 @@ struct TutorialView: View {
             Image("backgroundGradient")
                 .resizable()
                 .ignoresSafeArea()
+            Image("defaultBackground")
+                .resizable()
+                .ignoresSafeArea()
             VStack(spacing: 20){
                 Text("How To Play")
                     .foregroundColor(.white)
@@ -43,7 +46,7 @@ extension TutorialView {
     var headerText: some View {
         RoundedRectangle(cornerRadius: 32)
             .frame(height: 170)
-            .foregroundColor(.theme.secondary.opacity(0.30))
+            .foregroundColor(.theme.terciary.opacity(0.70))
             .overlay(
                 Text("This is an AR Shooter Game. Explore your surroundings to discover floating elements. When you find an element, aim and tap the corresponding buttons to release the projectiles.")
                     .foregroundColor(.white)
@@ -55,7 +58,7 @@ extension TutorialView {
     var collectableSection: some View{
         RoundedRectangle(cornerRadius: 32)
             .frame(height: 170)
-            .foregroundColor(.theme.secondary.opacity(0.30))
+            .foregroundColor(.theme.terciary.opacity(0.70))
             .overlay(
                 HStack{
                     Image("collectIcon")
@@ -73,7 +76,7 @@ extension TutorialView {
     var neutralizableSection: some View{
         RoundedRectangle(cornerRadius: 32)
             .frame(height: 170)
-            .foregroundColor(.theme.secondary.opacity(0.30))
+            .foregroundColor(.theme.terciary.opacity(0.70))
             .overlay(
                 HStack{
                     Text("This is a neutralizable element. Press the 'Neutralize' button to eliminate it.")
@@ -90,7 +93,7 @@ extension TutorialView {
     var footerText: some View {
         RoundedRectangle(cornerRadius: 32)
             .frame(height: 120)
-            .foregroundColor(.theme.secondary.opacity(0.30))
+            .foregroundColor(.theme.terciary.opacity(0.70))
             .overlay(
                 Text("Collect the required amount of each element within the available time to complete your mission. Good luck!")
                     .foregroundColor(.white)

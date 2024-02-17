@@ -16,6 +16,9 @@ struct LevelsView: View {
             Image("backgroundGradient")
                 .resizable()
                 .ignoresSafeArea()
+            Image("defaultBackground")
+                .resizable()
+                .ignoresSafeArea()
             VStack(spacing: 40){
                 headerSection
                 moonButton
@@ -61,16 +64,11 @@ extension LevelsView {
     var headerSection: some View {
         RoundedRectangle(cornerRadius: 16)
             .frame(height: 100)
-            .foregroundColor(.gray.opacity(0.10))
+            .foregroundColor(.theme.secondary.opacity(0.60))
             .overlay(
-                HStack(spacing: 20){
-                    Image("folderIllustration")
-                        .resizable()
-                        .frame(width: 55, height: 45)
                     Text("Choose a mission")
                         .foregroundColor(.white)
                         .font(.system(size: 26, weight: .semibold))
-                }
             )
     }
     

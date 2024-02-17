@@ -13,7 +13,11 @@ struct WinView: View {
     
     var body: some View {
         ZStack {
-            Color.theme.background
+            Image("backgroundGradient")
+                .resizable()
+                .ignoresSafeArea()
+            Image("defaultBackground")
+                .resizable()
                 .ignoresSafeArea()
             VStack(spacing: 26){
                 Text("Mission accomplished!")
@@ -21,7 +25,7 @@ struct WinView: View {
                     .foregroundColor(.white)
                 ZStack {
                     RoundedRectangle(cornerRadius: 32)
-                        .foregroundColor(.theme.secondary)
+                        .foregroundColor(.theme.secondary.opacity(0.9))
                     VStack(spacing: 26){
                         headerText
                         HStack(spacing: 20){
@@ -64,7 +68,7 @@ extension WinView {
     var catchedComponents: some View {
         ZStack(){
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(.white.opacity(0.1))
+                .foregroundColor(.theme.terciary.opacity(0.4))
             VStack{
                 Image("folderIllustration")
                     .resizable()
@@ -80,7 +84,7 @@ extension WinView {
     var removedComponents: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(.white.opacity(0.1))
+                .foregroundColor(.theme.terciary.opacity(0.4))
             VStack{
                 Image("beckerIllustration")
                     .resizable()

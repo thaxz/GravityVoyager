@@ -14,6 +14,9 @@ struct GameOverView: View {
             Image("backgroundGradient")
                 .resizable()
                 .ignoresSafeArea()
+            Image("defaultBackground")
+                .resizable()
+                .ignoresSafeArea()
             VStack(spacing: 20){
                 ZStack {
                     RoundedRectangle(cornerRadius: 16)
