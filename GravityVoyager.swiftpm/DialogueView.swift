@@ -1,8 +1,10 @@
 import Foundation
 import SwiftUI
 
+/// The view responsible for displaying dialogues within the game
 struct DialogueView: View {
     
+    /// The type of planet associated with the dialogue
     let planet: PlanetType
     
     /// The router manager for handling navigation within the app.
@@ -52,6 +54,7 @@ struct DialogueView: View {
 
 extension DialogueView {
     
+    /// Creates a typewriter effect as the dialogue is being written.
     func typeWriter(at position: Int = 0) {
         isAnimating = true
         if position == 0 {

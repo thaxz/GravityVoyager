@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import ARKit
 
-// MARK: A SwiftUI representation of the ARKit view controller.
+/// A SwiftUI representation of the ARKit view controller.
 struct ARViewContainer: UIViewControllerRepresentable {
     
     /// The delegate responsible for game logic.
@@ -12,7 +12,7 @@ struct ARViewContainer: UIViewControllerRepresentable {
     typealias UIViewControllerType = GameViewController
     
     /// Creates and configures the ARKit view controller.
-    /// - Parameter context: The context in which SwiftUI calls this method.
+    /// - Parameter context: The context in which this method is called.
     /// - Returns: A configured instance of GameViewController.
     func makeUIViewController(context: Context) -> GameViewController {
         let viewController = GameViewController()

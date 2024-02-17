@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+/// View responsible for displaying the app credits.
 struct CreditsView: View {
     @EnvironmentObject private var routeManager: NavigationRouter
     var body: some View {
@@ -40,6 +41,7 @@ struct CreditsView: View {
     }
 }
 
+/// Container that displays credits information
 struct CreditsContainer: View {
     let headerName: String
     let source: String

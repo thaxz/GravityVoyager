@@ -1,14 +1,14 @@
 import Foundation
 
+/// Struct representing a planet
 struct Planet {
-    
     let name: String
     let dialogue: [String]
     let missionTime: Int
     let atmosphericElements: [AtmosphericElement]
-    
 }
 
+/// Struct representing the atmospheric elements
 struct AtmosphericElement: Identifiable {
     var id = UUID()
     let name: String
@@ -19,11 +19,11 @@ struct AtmosphericElement: Identifiable {
     let usesAndApplications: String
 }
 
+/// Enum defining different types of planets
 enum PlanetType {
-    
     case moon
     case mars
-    
+    /// Returns the data corresponding to each planet type
     var data: Planet {
         switch self {
         case .moon:
@@ -34,6 +34,7 @@ enum PlanetType {
     }
 }
 
+/// Enum defining different types of information about atmospheric elements
 enum TypeOfInformation: String {
     case about = "About"
     case origin = "Origin"

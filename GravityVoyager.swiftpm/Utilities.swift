@@ -1,17 +1,14 @@
 import Foundation
 import SwiftUI
 
-// todo: mudar
-
 // MARK: Extensions
 
-// Color extension to define the app's color theme.
+/// Color extension to define the app's color theme.
 extension Color {
-    
     static let theme = ColorTheme()
-    
 }
 
+/// Structure defining the color theme for the app.
 struct ColorTheme {
     let primary = Color("primaryColor")
     let secondary = Color("secondaryColor")
@@ -21,20 +18,21 @@ struct ColorTheme {
     let moon = Color("moonColor")
 }
 
-//The extension adds a subscript and The subscript takes an offset parameter of type Int and returns the corresponding character at the specified position. It's used on the TypeWritter effect
-
+/// The extension adds a subscript to String, allowing access to characters at specific indices.
+/// Used in DialogueView to create the typewriter effect
 extension String {
     subscript(offset: Int) -> Character {
         self[index(startIndex, offsetBy: offset)]
     }
 }
 
+///Preview Provider Extension
 extension PreviewProvider {
     static var dev: DeveloperPreview{
         return DeveloperPreview.shared
     }
 }
-
+/// Struct providing mock data for preview purposes
 class DeveloperPreview {
     
     static let shared = DeveloperPreview()
@@ -55,11 +53,13 @@ class DeveloperPreview {
 
 // MARK: Enums
 
+/// Enum defining the type of button.
 enum TypeOfButton {
     case primary
     case secondary
 }
 
+/// Enum defining the type of sound.
 enum SoundType: String {
     case neutralizeSound = "neutralizingElements"
     case collectSound = "collectingElements"

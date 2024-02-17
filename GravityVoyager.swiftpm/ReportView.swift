@@ -1,8 +1,10 @@
 import Foundation
 import SwiftUI
 
+/// A view for displaying the reports when you win the game
 struct ReportView: View {
     
+    /// The type of planet associated with the report
     let planet: PlanetType
     
     var body: some View {

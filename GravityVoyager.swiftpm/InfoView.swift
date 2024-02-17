@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The view responsible for displaying information about the game. It's used as a sheet
 struct InfoView: View {
     var body: some View {
         ZStack{

@@ -9,21 +9,24 @@ import Foundation
 import SwiftUI
 import AVFoundation
 
-/// Controls haptics and vibrations
+/// Controls haptics and vibrations for the app
 class HapticManager {
     
+    /// Shared instance of the HapticManager
     static let shared = HapticManager()
     private init () {}
     
+    /// Triggers a heavy impact haptic feedback
     func impact(){
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
     }
 }
 
-/// Manages audio
+/// Manages audio playback for the app
 class SoundManager {
     
+    /// Shared instance of the SoundManager
     static let shared = SoundManager()
     private init () {}
     
@@ -42,5 +45,4 @@ class SoundManager {
             print("erro tocando efeito sonoro")
         }
     }
-    
 }

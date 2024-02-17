@@ -3,14 +3,18 @@ import RealityKit
 import SwiftUI
 import Combine
 
-// MARK: Custom ARKit view controller for handling the game logic and rendering.
-
+/// Custom ARKit view controller for handling the game logic and rendering.
 class GameViewController: UIViewController, ARSCNViewDelegate {
     
+    /// Delegate responsible for handling game logic
     var gameLogicDelegate: GameLogicDelegate? = nil
+    /// Type of planet associated with the game
     var planetType: PlanetType?
+    /// The ARSCNView used for rendering the AR scene
     var sceneView: ARSCNView!
+    /// The AVAudioPlayer for playing sounds
     var player: AVAudioPlayer!
+    /// Cancellable storage for Combine subscriptions
     private var cancellables: Set<AnyCancellable> = []
     
     // MARK: View lifecycle
@@ -29,6 +33,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         self.configureSession()
     }
     
+    /// Configures the ARSCNView for rendering the AR scene
     func setupARView() {
         sceneView = ARSCNView()
         sceneView.delegate = self
@@ -37,6 +42,7 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.physicsWorld.contactDelegate = self
     }
     
+    /// Adds a random number of elements to the scene.
     func addRandomElements() {
         let numberOfElements = Int.random(in: 1...5)
         for _ in 1...numberOfElements {
@@ -45,7 +51,6 @@ class GameViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    // MARK: Combine
     /// Subscribes to the ARManager's actions stream to handle different AR actions.
     func subscribeToActionStream(){
         ARManager.shared.actionsStream
@@ -76,7 +81,6 @@ extension GameViewController {
             configuration.planeDetection = ARWorldTrackingConfiguration.PlaneDetection.horizontal
             sceneView.session.run(configuration)
         } else {
-            // less immersive AR experience due to lower end processor
             let configuration = AROrientationTrackingConfiguration()
             sceneView.session.run(configuration)
         }
@@ -118,7 +122,6 @@ extension GameViewController {
         return (Float(arc4random()) / Float(UInt32.max)) * (first - second) + second
     }
     
-    // TODO: Find a better range
     /// Adds a new element to the scene at a random position.
     func addNewElement(type: ElementType) {
         let elementNode: SCNNode
@@ -167,6 +170,7 @@ extension GameViewController {
         }
     }
     
+    /// Calls game over
     func gameOver() {
         if var gameLogicDelegate = self.gameLogicDelegate {
             DispatchQueue.main.async {
@@ -187,11 +191,11 @@ extension GameViewController: SCNPhysicsContactDelegate {
             return
         }
         switch (categoryA, categoryB) {
-            //MARK: CollectableRay and CollectableElement
+            // CollectableRay and CollectableElement
         case (CollisionCategory.collectRay, CollisionCategory.collectableElement),
             (CollisionCategory.collectableElement, CollisionCategory.collectRay):
             handleCollision(contact: contact, type: .collectable)
-            //MARK: NeutralizeRay and CollectableElement
+            // NeutralizeRay and CollectableElement
         case (CollisionCategory.neutralizeRay, CollisionCategory.neutralizableElement),
             (CollisionCategory.neutralizableElement, CollisionCategory.neutralizeRay):
             handleCollision(contact: contact, type: .neutralizable)
@@ -202,6 +206,7 @@ extension GameViewController: SCNPhysicsContactDelegate {
         }
     }
     
+    /// Handles collision between nodes
     func handleCollision(contact: SCNPhysicsContact, type: ElementType) {
         removeAndReplaceNodes(contact: contact)
         HapticManager.shared.impact()

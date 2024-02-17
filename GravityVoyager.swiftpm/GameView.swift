@@ -1,11 +1,14 @@
 import Foundation
 import SwiftUI
 
+/// The view that hosts the game according to the chosen planet
 struct GameView: View {
-    /// The router manager for handling navigation within the app.
-    @EnvironmentObject private var routeManager: NavigationRouter
-    @EnvironmentObject private var viewModel: GameViewModel
     
+    /// The router manager for handling navigation within the app
+    @EnvironmentObject private var routeManager: NavigationRouter
+    /// The view model responsible for managing the game
+    @EnvironmentObject private var viewModel: GameViewModel
+    /// The type of planet of the game 
     let planet: PlanetType
     
     var body: some View {

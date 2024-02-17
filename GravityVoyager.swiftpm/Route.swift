@@ -1,8 +1,7 @@
 import Foundation
 import SwiftUI
 
-// TODO: SEND OBJECTS TO EACH SCREEN
-// MARK: Enum representing different screens in the app's navigation flow.
+/// Enum representing different screens in the app's navigation flow.
 enum Route {
     
     // Navigation cases
@@ -17,11 +16,10 @@ enum Route {
     case creditsView
 }
 
-// MARK: - View and Hashable Conformance
-
+///View and Hashable Conformance
 extension Route: View {
+    
     /// A SwiftUI View representation of the current Route.
-    ///
     var body: some View {
         switch self {
         case .levelsView:
@@ -44,8 +42,7 @@ extension Route: View {
     }
 }
 
-// MARK: Separating hashable protocol
-
+/// Hashable protocol
 extension Route: Hashable {
     
     /// Generates a hash value for the enum cases to conform to the Hashable protocol.

@@ -1,10 +1,14 @@
 import Foundation
 import SwiftUI
 
+/// A view allowing users to select different missions
 struct LevelsView: View {
+    
     /// The router manager for handling navigation within the app.
     @EnvironmentObject private var routeManager: NavigationRouter
+    /// The view model managing game logic
     @EnvironmentObject private var viewModel: GameViewModel
+    /// Boolean indicating whether the info sheet is shown
     @State var showInfoSheet: Bool = false
     
     var body: some View {
@@ -12,7 +16,7 @@ struct LevelsView: View {
             Image("backgroundGradient")
                 .resizable()
                 .ignoresSafeArea()
-            VStack(spacing: 50){
+            VStack(spacing: 40){
                 headerSection
                 moonButton
                 marsButton
@@ -27,7 +31,7 @@ struct LevelsView: View {
         }
         .sheet(isPresented: $showInfoSheet){
             InfoView()
-                .presentationDetents([.fraction(0.8)])
+                .presentationDetents([.medium])
         }
     }
 }
@@ -109,7 +113,6 @@ extension LevelsView {
             }
         }
     }
-    
 }
 
 struct LevelsView_Previews: PreviewProvider {

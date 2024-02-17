@@ -1,10 +1,12 @@
 import SwiftUI
-//todo: limpar o body criar uma extensão e colocar os componentes
 
+/// The view responsible for displaying the Game Over screen.
 struct GameOverView: View {
+    
     /// The router manager for handling navigation within the app.
     @EnvironmentObject private var routeManager: NavigationRouter
     
+    /// The type of planet associated with the game over screen
     let planet: PlanetType
     
     var body: some View {

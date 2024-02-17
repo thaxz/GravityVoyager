@@ -3,19 +3,19 @@ import Foundation
 import SceneKit
 import UIKit
 
-// MARK: ARModels
-
+/// Enum that represents the available ray types
 enum RayType {
     case collect
     case neutralize
 }
 
+/// Enum that represents the available element types
 enum ElementType {
     case collectable
     case neutralizable
 }
 
-/// Class representing the darts that are thrown at the scene
+/// Class that creates the collectable ray
 class CollectRay: SCNNode {
     override init () {
         super.init()
@@ -40,6 +40,7 @@ class CollectRay: SCNNode {
     }
 }
 
+/// Class that creates the neutralizable ray
 class NeutralizeRay: SCNNode {
     override init () {
         super.init()
@@ -52,20 +53,18 @@ class NeutralizeRay: SCNNode {
         self.physicsBody?.isAffectedByGravity = false
         /// Setting collision bitmasks
         self.physicsBody?.categoryBitMask = CollisionCategory.neutralizeRay // Applying Dart BitMask
-        // tem que adicionar o neutralize aq tb
         self.physicsBody?.contactTestBitMask = CollisionCategory.collectableElement | CollisionCategory.neutralizableElement // Bitmask of what is going to collide with
         let material = SCNMaterial()
         material.diffuse.contents = Color.black
         material.diffuse.contents = UIImage(named: "neutralizeIcon")
         self.geometry?.materials  = [material]
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
-// MARK: Class representing a floating dartboard that randomly appears in the scene
+/// Class responsible for creating a floating collectable element that randomly appears in the scene.
 class CollectableElement: SCNNode {
     let type: PlanetType
     let imageName: String
@@ -93,15 +92,13 @@ class CollectableElement: SCNNode {
         let randomNumber: Int = Int.random(in: 1...3)
         material.diffuse.contents = UIImage(named: "\(imageName)\(randomNumber)")
         self.geometry?.materials  = [material]
-        
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
+//// Class responsible for creating a floating neutralizable element that randomly appears in the scene.
 class NeutralizableElement: SCNNode {
     let type: PlanetType
     let imageName: String
@@ -130,9 +127,7 @@ class NeutralizableElement: SCNNode {
         self.geometry?.materials  = [material]
         
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
+    }    
 }

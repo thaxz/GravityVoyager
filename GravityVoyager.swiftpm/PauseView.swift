@@ -1,9 +1,14 @@
 import Foundation
 import SwiftUI
 
+/// View displayed when the game is paused
 struct PauseView: View {
+    
+    /// The router manager for handling navigation within the app
     @EnvironmentObject private var routeManager: NavigationRouter
+    /// Closure to resume the game
     let play: () -> Void
+    
     var body: some View {
         ZStack {
             Color.black.opacity(0.5).ignoresSafeArea()

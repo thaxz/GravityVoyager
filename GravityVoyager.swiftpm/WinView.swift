@@ -1,11 +1,14 @@
 import Foundation
 import SwiftUI
 
+/// View displayed when the player wins the game
 struct WinView: View {
-    /// The router manager for handling navigation within the app.
-    @EnvironmentObject private var routeManager: NavigationRouter
-    @EnvironmentObject private var viewModel: GameViewModel
     
+    /// The router manager for handling navigation within the app
+    @EnvironmentObject private var routeManager: NavigationRouter
+    /// The view model containing game data and logic
+    @EnvironmentObject private var viewModel: GameViewModel
+    /// The type of planet where the player won
     let planet: PlanetType
     
     var body: some View {

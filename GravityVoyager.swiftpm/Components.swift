@@ -1,8 +1,10 @@
 import Foundation
 import SwiftUI
 
-// MARK: Buttons
+//Creating components in order to build reusable blocks of functionality and make code modular
 
+// MARK: Buttons
+/// Primary button component
 struct PrimaryButton: View {
     let title: String
     let action: () -> ()
@@ -23,6 +25,7 @@ struct PrimaryButton: View {
     }
 }
 
+/// Secondary button component
 struct SecondaryButton: View {
     let title: String
     let action: () -> ()
@@ -43,6 +46,25 @@ struct SecondaryButton: View {
     }
 }
 
+// MARK: Dialogue
+/// Container that holds the dialogue and it's used on DialogueView
+struct DialogueContainer: View {
+    var text: String
+    var body: some View {
+        ZStack(alignment: .topLeading){
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundColor(Color.theme.secondary)
+                .opacity(0.80)
+            Text(text)
+                .font(.system(size: 16, weight: .medium))
+                .foregroundColor(.white)
+                .padding(16)
+        }
+        .frame(height: 140)
+    }
+}
+
+/// Dialogue button component
 struct DialogueButton: View {
     let title: String
     let type: TypeOfButton
@@ -75,26 +97,8 @@ struct DialogueButton: View {
     }
 }
 
-// MARK: Dialogue
-
-struct DialogueContainer: View {
-    var text: String
-    var body: some View {
-        ZStack(alignment: .topLeading){
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(Color.theme.secondary)
-                .opacity(0.80)
-            Text(text)
-                .font(.system(size: 16, weight: .medium))
-                .foregroundColor(.white)
-                .padding(16)
-        }
-        .frame(height: 140)
-    }
-}
-
 // MARK: Report
-
+/// Customizable container that displays the name and the image of each element  and it's used on ReportView
 struct ReportHeader: View {
     let element: AtmosphericElement
     var body: some View {
@@ -124,6 +128,7 @@ struct ReportHeader: View {
     }
 }
 
+/// Customizable container that displays information about the elements and it's used on ReportView
 struct ReportBody: View {
     let element: AtmosphericElement
     let type: TypeOfInformation
@@ -169,6 +174,8 @@ struct ReportBody: View {
     }
 }
 
+// MARK: Timer
+///Container that holds the time remaining for each level, it's used on GameView
 struct TimeContainer: View {
     var time: Int
     var body: some View {

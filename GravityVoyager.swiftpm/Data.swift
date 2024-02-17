@@ -1,8 +1,10 @@
 import SwiftUI
 import Foundation
 
+/// A struct that manages the dialogues used within the application for different missions.
 struct Dialogue {
     
+    /// An array of strings representing the dialogues for Moon mission
     let moon: [String] = [
         "Hello! It's a joy to welcome you back to our team of space pilots. Since your last mission, you've become a legend in space exploration.",
         "As you know, here at the Grace-Jemison Institute, we're more than just an institution. We're a community dedicated to exploration and discovery in the universe.",
@@ -11,6 +13,7 @@ struct Dialogue {
         "May this mission mark a new era in interplanetary exploration. May your steps continue to inspire future generations of space explorers. Good luck! We look forward to seeing what you'll discover."
     ]
     
+    /// An array of strings representing the dialogues for Mars mission
     let mars: [String] = [
         "Welcome back to the Grace-Jemison Institute base. Your last mission on the Moon was exceptional, and your discoveries inspired everyone here.",
         "As the leader of this new era in interplanetary exploration, your next journey will be to Mars. The Red Planet awaits your exploration!",
@@ -18,11 +21,12 @@ struct Dialogue {
         "Our goal is to continue expanding human knowledge about Mars, and your advanced spacesuit and high-tech devices are ready for another incredible mission.",
         "May your courage continue to be the guiding light in our quest for knowledge. We look forward to the discoveries you will bring from this mission on Mars. Good luck!"
     ]
-    
 }
 
+/// A struct that holds data related to the atmospheric elements found on the Moon and Mars.
 struct PlanetsData {
     
+    /// An array containing atmospheric elements found on the Moon
     let moonElements: [AtmosphericElement] = [
         AtmosphericElement(
             name: "Helium-4",
@@ -66,6 +70,7 @@ struct PlanetsData {
         )
     ]
     
+    /// An array containing atmospheric elements found on Mars
     let marsElements: [AtmosphericElement] = [
         AtmosphericElement(
             name: "Carbon Dioxide",
@@ -108,7 +113,5 @@ struct PlanetsData {
             usesAndApplications: "They are commonly used as oxidizers in solid rocket propellants for space exploration and military missile systems. Additionally, perchlorate salts serve as key ingredients in pyrotechnics, explosives, and fireworks, producing bright flames and high-energy reactions."
             )
     ]
-    
-    
 }
 

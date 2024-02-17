@@ -1,10 +1,11 @@
 import Foundation
 import SwiftUI
 
+/// A view displaying the tutorial for playing the game
 struct TutorialView: View {
+    
     /// The router manager for handling navigation within the app.
     @EnvironmentObject private var routeManager: NavigationRouter
-    
     let planet: PlanetType
     
     var body: some View {
