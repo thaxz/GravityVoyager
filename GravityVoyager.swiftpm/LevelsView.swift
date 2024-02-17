@@ -31,7 +31,7 @@ struct LevelsView: View {
         }
         .sheet(isPresented: $showInfoSheet){
             InfoView()
-                .presentationDetents([.medium])
+                .presentationDetents([.fraction(0.8)])
         }
     }
 }
@@ -61,7 +61,7 @@ extension LevelsView {
     var headerSection: some View {
         RoundedRectangle(cornerRadius: 16)
             .frame(height: 100)
-            .foregroundColor(.theme.secondary.opacity(0.30))
+            .foregroundColor(.gray.opacity(0.10))
             .overlay(
                 HStack(spacing: 20){
                     Image("folderIllustration")

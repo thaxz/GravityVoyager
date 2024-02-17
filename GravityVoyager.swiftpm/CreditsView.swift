@@ -23,7 +23,7 @@ struct CreditsView: View {
                             .font(.system(size: 22, weight: .bold))
                         CreditsContainer(headerName: "Moon Information", source: "Nasa", url: "https://science.nasa.gov/moon/", author: "SMD Content Editors")
                         CreditsContainer(headerName: "Moon Composition", source: "Nasa", url: "https://science.nasa.gov/moon/composition/", author: "Andrea Jones, Science Advisor")
-                        CreditsContainer(headerName: "Moon Formation", source: "Nasa", url: "science.nasa.gov/moon/formation/", author: "Prabal Saxena, Sarah Valencia and Bill Bottke")
+                        CreditsContainer(headerName: "Moon Formation", source: "Nasa", url: "https://science.nasa.gov/moon/formation/", author: "Prabal Saxena, Sarah Valencia and Bill Bottke")
                         CreditsContainer(headerName: "Mars Information", source: "Nasa", url: "https://science.nasa.gov/mars/", author: "SMD Content Editors")
                         CreditsContainer(headerName: "Mars Composition", source: "Nasa", url: "https://science.nasa.gov/mars/facts/", author: "Andrea Jones, Science Advisor")
                         CreditsContainer(headerName: "Mars Atmosphere", source: "Arizona State University", url: "https://marsed.asu.edu/mep/atmosphere", author: "Sheri Klug")
