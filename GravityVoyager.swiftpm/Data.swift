@@ -39,7 +39,7 @@ struct PlanetsData {
         AtmosphericElement(
             name: "Neon",
             imageName: "collectMoon2",
-            description: "The moon doesn't have any casinos or buzzing diner signs, but it does have neon. NASA's LADEE spacecraft made the first detection of neon in the lunar exosphere. It is a noble gas characterized by its colorless, odorless, and inert properties, existing as a monatomic molecule, Ne.",
+            description: "The moon may lack casinos or bustling diner signs, but it does have neon. NASA's LADEE spacecraft made the first detection of neon in the lunar exosphere. It is a noble gas characterized by its colorless, odorless, and inert properties, existing as a monatomic molecule, Ne.",
             origin: "Originates from various sources, including volcanic outgassing, nuclear reactions occurring within the lunar regolith, and the implantation of solar wind particles.",
             chemicalProperties: "Neon is chemically inert under normal conditions, owing to its stable electronic configuration with a complete outer shell of electrons. It belongs to group 18 of the periodic table and exhibits low solubility, low reactivity, and high ionization energy.",
             usesAndApplications: "One of its most well-known uses is in neon lighting and advertising signs, where it emits a distinctive orange-red glow when electrically charged. Additionally, neon is employed in high-voltage indicators and as a cryogenic refrigerant in various scientific applications."
@@ -75,43 +75,43 @@ struct PlanetsData {
         AtmosphericElement(
             name: "Carbon Dioxide",
             imageName: "neutralizeMars1",
-            description: "Is a colorless, odorless gas that constitutes the majority of the Martian atmosphere, accounting for approximately 95% to 96% of its composition. It is a greenhouse gas that contributes to the planet's greenhouse effect, trapping heat and regulating surface temperatures.",
-            origin: "The primary source of carbon dioxide in the Martian atmosphere is attributed to outgassing from volcanic activity and the release of carbon dioxide stored in polar ice caps during seasonal variations. ",
-            chemicalProperties: "Is a linear molecule composed of one carbon atom bonded to two oxygen atoms through double covalent bonds. It is a stable molecule under normal atmospheric conditions and serves as a key component in the carbon cycle of Mars. ",
+            description: "Mars is covered by a thin atmosphere, mostly composed of carbon dioxide. It's a colorless, odorless gas that makes up approximately 95% to 96% of the Martian atmosphere. It acts as a greenhouse gas, contributing to the planet's greenhouse effect by trapping heat and regulating surface temperatures.",
+            origin: "The main source of carbon dioxide in the Martian atmosphere comes from volcanic activity and the release of carbon dioxide stored in polar ice caps during seasonal variations.",
+            chemicalProperties: "Carbon dioxide is a linear molecule consisting of one carbon atom bonded to two oxygen atoms through double covalent bonds. It's a stable molecule under normal atmospheric conditions and plays a key role in Mars' carbon cycle.",
             usesAndApplications: "In the food and beverage industry, carbon dioxide is commonly used to carbonate beverages, extend shelf life in packaged foods, and control pH levels during food processing. Additionally, it serves as a key component in fire extinguishers, where it displaces oxygen to suppress flames."
         ),
         AtmosphericElement(
             name: "Nitrogen",
             imageName: "collectMars1",
-            description: "Is a diatomic molecule consisting of two nitrogen atoms bonded together. It constitutes a small percentage of the Martian atmosphere, approximately 2.7%. ",
+            description: "A team using the Sample Analysis at Mars (SAM) instrument suite aboard NASA’s Curiosity rover detected nitrogen on the surface of Mars from release during heating of Martian sediments. The samples were first heated to release molecules bound to the soil, then portions of the gases released were diverted to the SAM.",
             origin: "The origin of nitrogen in the Martian atmosphere is believed to be primarily from outgassing of the planet's interior, volcanic eruptions, and thermal escape processes.",
-            chemicalProperties: "Is a colorless, odorless, and inert gas under standard conditions. It is relatively stable and does not readily react with other elements or compounds in atmosphere. Nitrogen molecules consist of two nitrogen atoms bound by a strong triple bond, making it chemically unreactive in most atmospheric conditions.",
-            usesAndApplications: "In the food industry, is utilized for packaging to preserve the freshness and quality of perishable goods by preventing oxidation and spoilage. In the manufacturing sector, serves as a blanketing gas in chemical processes to prevent the formation of explosive atmospheres and inhibit oxidation during production and storage."
+            chemicalProperties: "Nitrogen is a colorless, odorless, and inert gas under standard conditions. It's relatively stable and does not readily react with other elements or compounds in the atmosphere. Nitrogen molecules consist of two nitrogen atoms bound by a strong triple bond, making it chemically unreactive in most atmospheric conditions.",
+            usesAndApplications: "In the food industry, nitrogen is utilized for packaging to preserve the freshness and quality of perishable goods by preventing oxidation and spoilage. In the manufacturing sector, it serves as a blanketing gas in chemical processes to prevent the formation of explosive atmospheres and inhibit oxidation during production and storage."
         ),
         AtmosphericElement(
             name: "Xenon",
             imageName: "collectMars2",
-            description: "Xenon is a noble gas that is colorless, odorless, and chemically inert. It is present in trace amounts in the Martian atmosphere, similar to its occurrence on Earth.",
+            description: "Xenon has been discovered in the Martian atmosphere with the mass spectrometer on the second Viking lander. Xenon is only present in trace amounts. These findings come from the rover's Sample Analysis at Mars instrument suite, which studied xenon and krypton in Mars atmosphere.",
             origin: "The origin of xenon in the Martian atmosphere is primarily attributed to the degassing of the planet's interior and the release of trapped gases from Martian rocks and regolith. Xenon is also produced through radioactive decay processes of certain isotopes within the Martian crust.",
             chemicalProperties: "Xenon exhibits minimal chemical reactivity under normal atmospheric conditions, making it a stable and inert element. It is characterized by its ability to form compounds with highly electronegative elements, such as fluorine and nitrogen, under specific laboratory conditions.",
-            usesAndApplications: "In medicine, is employed as an inhaled anesthetic agent during surgical and diagnostic procedures. It's also utilized in radiation detectors to monitor radiation levels in nuclear facilities and medical applications. It is effective in detecting alpha, beta, and gamma particles, contributing to radiation safety and protection measures."
+            usesAndApplications: "Xenon is utilized in radiation detectors to monitor radiation levels in nuclear facilities and medical applications. It is effective in detecting alpha, beta, and gamma particles, contributing to radiation safety and protection measures. It is also used in the manufacture of 5-fluorouracil, a drug used to treat certain types of cancer."
         ),
         AtmosphericElement(
             name: "Carbon Monoxide",
             imageName: "neutralizeMars1",
-            description: "Is a colorless, odorless, and toxic gas composed of one carbon atom and one oxygen atom. It is present in small quantities in the Martian atmosphere, similar to its occurrence on Earth.",
-            origin: "It's origin can be attributed to a combination of geological and atmospheric processes. Volcanic eruptions, which occur sporadically on Mars, release carbon monoxide and other gases into the atmosphere. In addition, interactions between ultraviolet (UV) radiation from the Sun and carbon dioxide (CO2) can lead to the formation of carbon monoxide through photodissociation reactions.",
-            chemicalProperties: "Is a highly reactive gas that readily participates in chemical reactions with other atmospheric constituents. It is a powerful reducing agent and can react with oxidizing agents to produce carbon dioxide (CO2) or other oxidized carbon compounds.",
+            description: "Carbon monoxide was first detected in the Martian atmosphere by Kaplan et al. (1969) using high spectral resolution infrared spectroscopy. It is a minor constituent in the Martian atmosphere, but it plays an important role in the photochemical cycle of CO2 production and loss.",
+            origin: "Its origin can be attributed to a combination of geological and atmospheric processes. Volcanic eruptions, which occur sporadically on Mars, release carbon monoxide and other gases into the atmosphere. In addition, interactions between ultraviolet (UV) radiation from the Sun and carbon dioxide (CO2) can lead to the formation of carbon monoxide through photodissociation reactions.",
+            chemicalProperties: "Carbon monoxide is a highly reactive gas that readily participates in chemical reactions with other atmospheric constituents. It is a powerful reducing agent and can react with oxidizing agents to produce carbon dioxide (CO2) or other oxidized carbon compounds.",
             usesAndApplications: "One of its primary uses lies in chemical synthesis, serving as a versatile building block for various industrial processes. It plays a crucial role in the production of organic chemicals which are key intermediates in the manufacturing of plastics, pharmaceuticals, and solvents."
         ),
         AtmosphericElement(
             name: "Perchlorate",
             imageName: "collectMars3",
-            description: "Perchlorate is a chemical compound composed of one chlorine atom bonded to four oxygen atoms, forming the perchlorate ion. It is found in the Martian soil in significant quantities, particularly in regions such as the polar ice caps and the surface regolith. ",
+            description: "Perchlorate was first detected on Mars by the Wet Chemistry Laboratory (WCL) instrument on the Phoenix lander at a concentration of ~0.5% in northern plains soils, which is a level considered toxic to humans. Since that initial detection, perchlorate has been detected on Mars by both surface and orbital instruments.",
             origin: "The origin of perchlorate on Mars is believed to be primarily geological, resulting from a combination of chemical weathering processes, volcanic activity, and atmospheric reactions. It is also possible that perchlorate was delivered to Mars through meteoritic impacts or other cosmic processes.",
             chemicalProperties: "It is highly soluble in water, which suggests the potential for liquid water to have been involved in its formation and distribution. Perchlorate is also stable under a wide range of environmental conditions, making it a valuable indicator of the past and present Martian climate and hydrology.",
             usesAndApplications: "They are commonly used as oxidizers in solid rocket propellants for space exploration and military missile systems. Additionally, perchlorate salts serve as key ingredients in pyrotechnics, explosives, and fireworks, producing bright flames and high-energy reactions."
-            )
+        )
     ]
 }
 
