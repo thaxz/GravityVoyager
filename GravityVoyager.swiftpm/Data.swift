@@ -29,44 +29,44 @@ struct PlanetsData {
     /// An array containing atmospheric elements found on the Moon
     let moonElements: [AtmosphericElement] = [
         AtmosphericElement(
-            name: "Helium-4",
+            name: "Helium",
             imageName: "collectMoon1",
-            description: "Is a stable isotope of helium and it is characterized by having two protons and two neutrons in its nucleus. Helium-4 constitutes approximately 25% to 45% of the lunar atmosphere, making it the dominant component.",
-            origin: "Originates primarily from the radioactive decay of uranium and thorium present in the lunar rocks. These radioactive elements undergo alpha decay, emitting helium-4 nuclei as a byproduct. Over geological time scales, the accumulated helium-4 is released into the lunar atmosphere through processes such as volcanic outgassing and diffusion from the regolith.",
-            chemicalProperties: "Is an inert, non-reactive gas under normal conditions. It is colorless, odorless, and tasteless, exhibiting low solubility in water and other solvents. Due to its extremely low boiling and freezing points, helium-4 remains in a gaseous state over a wide range of temperatures and pressures. ",
-            usesAndApplications: "Has several important applications, including its use as a coolant in cryogenics and superconductivity research. Its exceptionally low boiling point near absolute zero (-269°C) makes it ideal for cooling superconducting magnets in applications such as magnetic resonance imaging (MRI) machines and particle accelerators. "
+            description: "NASA's Lunar Reconnaissance Orbiter (LRO) detected helium in the lunar exosphere using an onboard spectrometer. Measurements from the 1970s showed an increase in helium abundance as night progressed, a result that could be explained by atmospheric cooling, which concentrates atoms at lower altitudes.",
+            origin: "Primarily originates from the radioactive decay of uranium and thorium present in lunar rocks. These radioactive elements undergo alpha decay, emitting helium nuclei as a byproduct. Over geological time scales, the accumulated helium is released into the lunar exosphere through processes such as volcanic outgassing and diffusion from the regolith.",
+            chemicalProperties: "Helium is an inert, non-reactive gas under normal conditions. It is colorless, odorless, and tasteless, exhibiting low solubility in water and other solvents. Due to its extremely low boiling and freezing points, helium-4 remains in a gaseous state over a wide range of temperatures and pressures.",
+            usesAndApplications: "Helium has several important applications, including its use as a coolant in cryogenics and superconductivity research. Its exceptionally low boiling point near absolute zero (-269°C) makes it ideal for cooling superconducting magnets in applications such as magnetic resonance imaging (MRI) machines and particle accelerators."
         ),
         AtmosphericElement(
             name: "Neon",
             imageName: "collectMoon2",
-            description: "Neon, is a noble gas that constitutes approximately 20% to 30% of the lunar atmosphere. It is characterized by its colorless, odorless, and inert properties, existing as a monatomic molecule, Ne. Neon is one of the six noble gases and is the fifth most abundant element in the universe, although it is relatively rare on Earth.",
+            description: "The moon doesn't have any casinos or buzzing diner signs, but it does have neon. NASA's LADEE spacecraft made the first detection of neon in the lunar exosphere. It is a noble gas characterized by its colorless, odorless, and inert properties, existing as a monatomic molecule, Ne.",
             origin: "Originates from various sources, including volcanic outgassing, nuclear reactions occurring within the lunar regolith, and the implantation of solar wind particles.",
-            chemicalProperties: "Is chemically inert under normal conditions, owing to its stable electronic configuration with a complete outer shell of electrons. It belongs to group 18 of the periodic table and exhibits low solubility, low reactivity, and high ionization energy.",
+            chemicalProperties: "Neon is chemically inert under normal conditions, owing to its stable electronic configuration with a complete outer shell of electrons. It belongs to group 18 of the periodic table and exhibits low solubility, low reactivity, and high ionization energy.",
             usesAndApplications: "One of its most well-known uses is in neon lighting and advertising signs, where it emits a distinctive orange-red glow when electrically charged. Additionally, neon is employed in high-voltage indicators and as a cryogenic refrigerant in various scientific applications."
         ),
         AtmosphericElement(
             name: "Hydrogen",
             imageName: "collectMoon3",
-            description: "Is the lightest and most abundant element in the universe. On the Moon, hydrogen constitutes approximately 1% of the lunar atmosphere and is mainly sourced from solar wind interactions with the lunar surface.",
-            origin: "Originates primarily from solar wind interactions, where protons in the solar wind are implanted into the lunar regolith. Hydrogen is also released during the breakdown of water molecules present in lunar rocks and soil due to intense solar radiation.",
-            chemicalProperties: "Is a highly reactive and versatile element. As a diatomic molecule, H2, hydrogen forms strong covalent bonds between its two atoms. It is colorless, odorless, and tasteless in its gaseous state. Hydrogen has the lowest molecular weight of all elements and can easily diffuse through many materials.",
-            usesAndApplications: "It is commonly used as a fuel for rocket propulsion systems, where it provides high energy output with minimal environmental impact. Hydrogen fuel cells utilize the electrochemical reaction between hydrogen and oxygen to generate electricity, offering a clean and efficient power source."
+            description: "Hydrogen on the moon was first discovered by researchers with the U.S. Naval Research Laboratory (NRL), who were provided lunar samples by NASA for a research study. Recent research by NASA’s Lunar Reconnaissance Orbiter (LRO) spacecraft indicates these deposits of hydrogen may be slightly more abundant on crater slopes in the southern hemisphere that face the lunar South Pole.",
+            origin: "Primarily originates from solar wind interactions, where protons in the solar wind are implanted into the lunar regolith. Hydrogen is also released during the breakdown of water molecules present in lunar rocks and soil due to intense solar radiation.",
+            chemicalProperties: "Hydrogen is a highly reactive and versatile element. As a diatomic molecule, H2, hydrogen forms strong covalent bonds between its two atoms. It is colorless, odorless, and tasteless in its gaseous state. Hydrogen has the lowest molecular weight of all elements and can easily diffuse through many materials.",
+            usesAndApplications: "It is commonly used as a fuel for rocket propulsion systems, providing high energy output with minimal environmental impact. Hydrogen also has many other uses. In the chemical industry, it is used to make ammonia for agricultural fertilizer (the Haber process) and cyclohexane and methanol, which are intermediates in the production of plastics and pharmaceuticals."
         ),
         AtmosphericElement(
             name: "Argon",
             imageName: "neutralizeMoon1",
-            description: "Argon is a noble gas found in trace amounts in the lunar atmosphere. It constitutes approximately 1% of the lunar atmosphere. Is chemically inert and colorless, making it suitable for various scientific and industrial applications.",
+            description: "The surface-based mass spectrometer Lunar Atmosphere Composition Experiment (LACE) deployed during the Apollo 17 mission first detected argon on the moon. The argon density at the Apollo 17 site was seen to vary cyclically and also to show an overall decrease in density during 9 lunations.",
             origin: "Is primarily sourced from the radioactive decay of potassium-40 (40K) and other radioactive isotopes present in lunar rocks and regolith. When these isotopes decay, they release argon gas into the atmosphere over geological timescales.",
             chemicalProperties: "Argon is a noble gas and therefore exhibits high chemical stability and low reactivity. It is monatomic, meaning it exists as single atoms rather than molecules, and forms no compounds under normal conditions.",
-            usesAndApplications: "In the metal industry, is used as a shielding gas in arc welding processes to prevent oxidation and improve weld quality. It is also employed in the production of specialty metals and alloys. In the field of electronics, argon is utilized as a carrier gas in gas chromatography and as a quenching gas in fluorescent and incandescent lighting."
+            usesAndApplications: "In the metal industry, it is used as a shielding gas in arc welding processes to prevent oxidation and improve weld quality. It is also employed in the production of specialty metals and alloys. In the field of electronics, argon is utilized as a carrier gas in gas chromatography and as a quenching gas in fluorescent and incandescent lighting."
         ),
         AtmosphericElement(
             name: "Methane",
             imageName: "neutralizeMoon2",
-            description: "Is a colorless, odorless, and highly flammable gas that constitutes a minute fraction of the lunar atmosphere. Its presence is primarily attributed to external sources such as cometary impacts, solar wind, or migration from other celestial bodies.",
-            origin: "The origin of methane in the lunar atmosphere remains uncertain. It is hypothesized that methane may originate from exogenous sources, such as cometary impacts or solar wind implantation. Another possibility is the migration of methane from other celestial bodies through meteoritic bombardment or other mechanisms.",
-            chemicalProperties: "Is a simple hydrocarbon consisting of one carbon atom bonded to four hydrogen atoms. It is a non-polar molecule with a tetrahedral molecular geometry. Methane is highly flammable and combustible in the presence of oxygen, producing carbon dioxide and water vapor as combustion byproducts.",
-            usesAndApplications: "Is commonly used as a fuel source for heating, electricity generation, and transportation. In space exploration, methane could serve as a potential propellant for spacecraft propulsion systems, offering advantages such as high specific impulse and compatibility with in-situ resource utilization technologies."
+            description: "A positive identification of methane in the lunar exosphere has been made in data from the neutral mass spectrometer on the Lunar Atmosphere and Dust Environment Explorer (LADEE) spacecraft. Like argon-40, methane is adsorbed on the lunar surface during nighttime.",
+            origin: "The origin of methane in the lunar exosphere remains uncertain. It is hypothesized that methane may originate from exogenous sources, such as cometary impacts or solar wind implantation. Another possibility is the migration of methane from other celestial bodies through meteoritic bombardment or other mechanisms.",
+            chemicalProperties: "Methane is a simple hydrocarbon consisting of one carbon atom bonded to four hydrogen atoms. It is a non-polar molecule with a tetrahedral molecular geometry. Methane is highly flammable and combustible in the presence of oxygen, producing carbon dioxide and water vapor as combustion byproducts.",
+            usesAndApplications: "Is commonly used as a fuel source for heating, electricity generation, and transportation. Methane reacts with steam at high temperatures to yield carbon monoxide and hydrogen; the latter is used in the manufacture of ammonia for fertilizers and explosives."
         )
     ]
     

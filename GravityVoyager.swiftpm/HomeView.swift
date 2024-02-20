@@ -11,7 +11,8 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $routeManager.routes){
             ZStack {
-                Color.theme.background
+                Image("homeBackground")
+                    .resizable()
                     .ignoresSafeArea()
                 VStack(spacing: 20){
                     Spacer()

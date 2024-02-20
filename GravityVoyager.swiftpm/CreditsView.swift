@@ -9,6 +9,9 @@ struct CreditsView: View {
             Image("backgroundGradient")
                 .resizable()
                 .ignoresSafeArea()
+            Image("defaultBackground")
+                .resizable()
+                .ignoresSafeArea()
             VStack(spacing: 10){
                 ScrollView{
                     VStack(spacing: 20){
