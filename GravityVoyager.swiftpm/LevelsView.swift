@@ -68,7 +68,7 @@ extension LevelsView {
             .overlay(
                     Text("Choose a mission")
                         .foregroundColor(.white)
-                        .font(.system(size: 26, weight: .semibold))
+                        .font(.system(size: 32, weight: .semibold))
             )
     }
     

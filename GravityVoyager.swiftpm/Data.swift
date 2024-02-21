@@ -8,7 +8,7 @@ struct Dialogue {
     let moon: [String] = [
         "Hello! It's a joy to welcome you back to our team of space pilots. Since your last mission, you've become a legend in space exploration.",
         "As you know, here at the Grace-Jemison Institute, we're more than just an institution. We're a community dedicated to exploration and discovery in the universe.",
-        "We stand at incredible opportunities to expand our horizons, and we've chosen you to lead this mission. This time, your task goes beyond ship control; you'll land and explore the surfaces of the Moon.",
+        "We stand at incredible opportunities to expand our horizons, and we've chosen you to lead this mission. This time, your task goes beyond ship control; you'll land and explore the surface of the Moon.",
         "Your mission is crucial. Collecting samples to contribute to our understanding of the cosmos. Each discovery of yours will be a valuable piece in the universe's puzzle.",
         "May this mission mark a new era in interplanetary exploration. May your steps continue to inspire future generations of space explorers. Good luck! We look forward to seeing what you'll discover."
     ]

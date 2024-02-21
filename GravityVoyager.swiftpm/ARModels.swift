@@ -45,7 +45,7 @@ class NeutralizeRay: SCNNode {
     override init () {
         super.init()
         /// Creating geometry
-        let cone = SCNCone(topRadius: 0.02, bottomRadius: 0.035, height: 0.030)
+        let cone = SCNCone(topRadius: 0.0, bottomRadius: 0.035, height: 0.030)
         self.geometry = cone
         /// Creating physics shape
         let shape = SCNPhysicsShape(geometry: cone, options: nil)

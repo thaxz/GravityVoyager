@@ -54,7 +54,6 @@ struct DialogueContainer: View {
         ZStack(alignment: .topLeading){
             RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(Color.theme.secondary)
-                .opacity(0.80)
             Text(text)
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.white)

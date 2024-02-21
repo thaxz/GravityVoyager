@@ -25,6 +25,7 @@ struct TutorialView: View {
                         headerText
                         collectableSection
                         neutralizableSection
+                        middleText
                         footerText
                     }
                 }
@@ -87,6 +88,18 @@ extension TutorialView {
                         .scaledToFit()
                 }
                     .padding(20)
+            )
+    }
+    
+    var middleText: some View {
+        RoundedRectangle(cornerRadius: 32)
+            .frame(height: 120)
+            .foregroundColor(.theme.terciary.opacity(0.70))
+            .overlay(
+                Text("Be careful to perform the correct action according to the element type or you'll have to return to the ship to fix your equipment.")
+                    .foregroundColor(.white)
+                    .font(.system(size: 18, weight: .medium))
+                    .padding(.horizontal, 16)
             )
     }
     

@@ -16,7 +16,7 @@ struct DialogueView: View {
     
     var body: some View {
         ZStack(alignment: .bottom){
-            Image("backgroundGradient")
+            Image("dialogueBackground")
                 .resizable()
                 .ignoresSafeArea()
             VStack(spacing: 24){
